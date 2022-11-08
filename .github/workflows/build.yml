@@ -1,6 +1,13 @@
+name: 编译 OpenWrt
+
 on:
-  watch:
-    types: started
+  repository_dispatch:
+  workflow_dispatch:
+    inputs:
+      ssh:
+        description: 'SSH connection to Actions'
+        required: false
+        default: 'false'
 jobs:
   prepare_release:
     runs-on: ubuntu-20.04
