@@ -39,7 +39,7 @@ jobs:
     strategy:
       matrix:
         VERSION: [21.02, 22.03]
-        SET: [docker, non-docker]
+        SET: [docker]
 
     steps:
     - name: Checkout
